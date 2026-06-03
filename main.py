@@ -13,6 +13,11 @@ from datetime import datetime
 # Add project root to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+# Create necessary directories
+os.makedirs("logs", exist_ok=True)
+os.makedirs("memory", exist_ok=True)
+os.makedirs("data", exist_ok=True)
+
 from core.engine import AIEngine
 from security.permission_system import PermissionManager
 from config.settings import SYSTEM_CONFIG, LOG_LEVEL
